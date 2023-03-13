@@ -3,24 +3,26 @@ package org.example;
 import java.util.ArrayList;
 
 public class VendingMachine {
-//private Product product;
-private ArrayList<Product> productList = new ArrayList();
+    private ArrayList<Product> goods = new ArrayList();
 
-public String toString(){
-    String str = "";
-    return str;
+    public VendingMachine(ArrayList<Product> goods) {
+        this.goods = goods;
+    }
+    public String toString(){
+    String out = "";
+    return out;
 }
 
     public ArrayList<Product> getProductList() {
-        return productList;
+        return goods;
     }
 
-    public String GetProductForName (String name) {
-    for (Product prod : productList){
-        if (prod.getName().equals(name)) {
-//            System.out.println(prod.getName() + prod.getPrice());
-            return prod.toString();
+    public Product GetProductByName (String name) {
+        for (Product prod : goods){
+            if (prod.getName().equals(name)) {
+                return prod;
+            }
         }
+        return null;
     }
-}
 }
