@@ -5,6 +5,10 @@ public class Drink extends Product {
     Drink(String name, Double price) {
         super(name, price);
     }
+    Drink(String name, Double price, Double volume){
+        super(name, price);
+        this.volume = volume;
+    }
     public void setVolume(Double volume){
         this.volume = volume;
     }

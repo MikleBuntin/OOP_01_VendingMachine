@@ -2,8 +2,8 @@ package org.example;
 
 public class Product {
     private String name;
-    private Float price;
-    Product(String name, Float price){
+    private Double price;
+    Product(String name, Double price){
         this.name = name;
         this.price = price;
     }
@@ -12,14 +12,23 @@ public class Product {
         this.name = name;
     }
 
-    public void setPrice(Float price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 
     public String getName() {
         return name;
     }
-    public Float getPrice(){
+    public Double getPrice(){
         return price;
+    }
+    public void consume(){
+        System.out.println("Product consumed");
+    }
+
+    @Override
+    public String toString() {
+        String str = getName() + ", " + getPrice().toString() + "р.";
+        return str;
     }
 }
