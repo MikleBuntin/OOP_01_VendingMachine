@@ -12,22 +12,26 @@ public class Main {
         product1 = new Product("Breaad", 1.0);
         products.add(product1);
 
-        VendingMachine firstMashine = new VendingMachine(products);
+//        VendingMachine firstMashine = new VendingMachine(products);
 
         Product prod3 = new Product("Nuts", 1.5);
-        firstMashine.AddProduct(prod3);
+        products.add(prod3);
+//        firstMashine.AddProduct(prod3);
 
-        firstMashine.AddProduct(new Product("Bounty", 1.2));
+//        firstMashine.AddProduct(new Product("Bounty", 1.2));
 
         Drink drink1 = new Drink("Milk", 2.7);
         drink1.setVolume(1.0);
-        firstMashine.AddProduct(drink1);
+//        firstMashine.AddProduct(drink1);
+        products.add(drink1);
 
         Drink drink2 = new Drink("Juice Orange", 2.5, 1.0);
-        firstMashine.AddProduct(drink2);
-        firstMashine.AddProduct(new Drink("Juice Apple", 1.8, 1.0));
+//        firstMashine.AddProduct(drink2);
+//        firstMashine.AddProduct(new Drink("Juice Apple", 1.8, 1.0));
+        products.add(drink2);
+        products.add(new Drink("Juice Apple", 1.8, 1.0));
 
+        VendingMachine firstMashine = new VendingMachine(products);
         firstMashine.printProductList();
-
     }
 }
