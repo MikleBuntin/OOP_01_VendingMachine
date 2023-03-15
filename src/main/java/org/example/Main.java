@@ -33,5 +33,8 @@ public class Main {
 
         VendingMachine firstMashine = new VendingMachine(products);
         firstMashine.printProductList();
+        for (Product prod : products){
+            prod.consume();
+        }
     }
 }

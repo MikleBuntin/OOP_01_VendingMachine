@@ -22,4 +22,7 @@ public class Drink extends Product {
         String str = getName() + ", " + getVolume() + "l, " + getPrice().toString() + "р.";
         return str;
     }
+    public void consume(){
+        System.out.println("Product drinked");
+    }
 }
