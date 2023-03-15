@@ -3,10 +3,13 @@ package org.example;
 import java.util.ArrayList;
 
 public class VendingMachine {
-    private ArrayList<Product> goods = new ArrayList();
+    protected ArrayList<Product> goods = new ArrayList();
 
     public VendingMachine(ArrayList<Product> goods) {
         this.goods = goods;
+    }
+    public void AddProduct(Product prod){
+        goods.add(prod);
     }
     public String toString(){
     String out = "";
@@ -15,6 +18,11 @@ public class VendingMachine {
 
     public ArrayList<Product> getProductList() {
         return goods;
+    }
+    public void printProductList() {
+        for (Product pr : goods){
+            System.out.println(pr.toString());;
+        }
     }
 
     public Product GetProductByName (String name) {
