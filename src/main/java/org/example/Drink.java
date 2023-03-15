@@ -12,4 +12,14 @@ public class Drink extends Product {
     public void setVolume(Double volume){
         this.volume = volume;
     }
+
+    public Double getVolume(){
+        return volume;
+    }
+
+    @Override
+    public String toString() {
+        String str = getName() + ", " + getVolume() + "l, " + getPrice().toString() + "р.";
+        return str;
+    }
 }
